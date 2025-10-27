@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<metacharset="UTF-8">
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<title>Arithmetic Operations</title>
+</head>
+<body>
+    <script>
+        function calculate() {
+        let num1=parseFloat(prompt("enter the first number"));
+        let num2=parseFloat(prompt("enter the second number"));
+        let operator=prompt("enter the operator(+,-,*,/):");
+        let result;
+        switch (operator){
+            case"+":result=num1+num2;break;
+            case"-":result=num1-num2;break;
+            case"*":result=num1*num2;break;
+            case"/":result=num2!==0?num1/num2:"Cannot divide by zero!";break;
+            default:result="invalid operator!";
+        }
+        alert("result:"+result);
+    }
+    calculate();
+    </script>
+</body>
+</html>

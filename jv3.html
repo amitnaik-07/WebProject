@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<metacharset="UTF-8">
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<title>Javascript object implementation</title>
+</head>
+<body>
+    <h2>Javascript object implementation</h2>
+    <script>
+        var person={
+            firstName:"John",
+            lastName:"doe",
+            age:30,
+            fullName:function(){
+                return this.firstName+" "+this.lastName;
+            }
+        };
+    </script>
+    <button onclick="document.getElementById('info').innerText='name:'+person.fullName()+',Age:'+person.age;">Display Info</button>
+    <p id="info"></p>
+</body>
+</html>

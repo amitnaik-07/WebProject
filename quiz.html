@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz – On The Way To Krishna</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #7b3f00;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff8f0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #5a2e00;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #006400;
+    }
+    .correct-answer {
+      font-style: italic;
+      color: green;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quiz – On The Way To Krishna</h1>
+  <div class="quiz-container">
+    <form id="quizForm">
+
+      <div class="question">
+        <h3>1. Who is Krishna according to the book?</h3>
+        <label><input type="radio" name="q1" value="a"> A mythological character</label>
+        <label><input type="radio" name="q1" value="b"> A powerful king</label>
+        <label><input type="radio" name="q1" value="c"> The Supreme Personality of Godhead</label>
+        <label><input type="radio" name="q1" value="d"> A warrior</label>
+        <p id="a1" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>2. What is the main goal of human life described in the book?</h3>
+        <label><input type="radio" name="q2" value="a"> To earn money and enjoy life</label>
+        <label><input type="radio" name="q2" value="b"> To serve Krishna and attain liberation</label>
+        <label><input type="radio" name="q2" value="c"> To travel and gain knowledge</label>
+        <label><input type="radio" name="q2" value="d"> To win battles like Arjuna</label>
+        <p id="a2" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>3. Which scripture is the main reference in the book?</h3>
+        <label><input type="radio" name="q3" value="a"> Rigveda</label>
+        <label><input type="radio" name="q3" value="b"> Bhagavad Gita</label>
+        <label><input type="radio" name="q3" value="c"> Ramayana</label>
+        <label><input type="radio" name="q3" value="d"> Upanishads</label>
+        <p id="a3" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>4. What does Krishna teach Arjuna in the Gita?</h3>
+        <label><input type="radio" name="q4" value="a"> How to do politics</label>
+        <label><input type="radio" name="q4" value="b"> The art of warfare</label>
+        <label><input type="radio" name="q4" value="c"> The path of devotion and duty</label>
+        <label><input type="radio" name="q4" value="d"> How to conquer kingdoms</label>
+        <p id="a4" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>5. What is the path to reach Krishna mentioned in the book?</h3>
+        <label><input type="radio" name="q5" value="a"> Meditation in forests</label>
+        <label><input type="radio" name="q5" value="b"> Performing yagnas</label>
+        <label><input type="radio" name="q5" value="c"> Surrender and devotional service</label>
+        <label><input type="radio" name="q5" value="d"> Ritual fasting</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <button type="button" id="submitBtn">Submit Quiz</button>
+      <div id="result"></div>
+
+    </form>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'c',
+      q2: 'b',
+      q3: 'b',
+      q4: 'c',
+      q5: 'c'
+    };
+
+    const explanations = {
+      q1: "Correct Answer: c) The Supreme Personality of Godhead",
+      q2: "Correct Answer: b) To serve Krishna and attain liberation",
+      q3: "Correct Answer: b) Bhagavad Gita",
+      q4: "Correct Answer: c) The path of devotion and duty",
+      q5: "Correct Answer: c) Surrender and devotional service"
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      let total = 5;
+
+      for (let i = 1; i <= total; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = answers[`q${i}`];
+        const answerEl = document.getElementById(`a${i}`);
+
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+          }
+        }
+
+        answerEl.innerText = explanations[`q${i}`];
+      }
+
+      document.getElementById('result').innerText =
+        `You scored ${score} out of ${total}. ${score === total ? "Excellent!" : score >= 3 ? "Good job!" : "Try again!"}`;
+    }
+
+    // Make sure event listener is registered AFTER DOM is ready
+    window.onload = () => {
+      document.getElementById('submitBtn').addEventListener('click', checkAnswers);
+    };
+  </script>
+
+</body>
+</html>

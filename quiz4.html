@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz – On The Way To Krishna</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3a14a;
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+      margin-top: -15px;
+    }
+    h1 {
+      text-align: center;
+      color: #7b3f00;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #f5af5f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #5a2e00;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #006400;
+    }
+    .correct-answer {
+      font-style: italic;
+      color: green;
+      margin-top: 5px;
+    }
+     #back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    #back-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quiz-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quiz – Laws of Nature</h1>
+  <button onclick="window.location.href='chap 4.html'" id="back-button" type="button">Back</button>
+  <div class="quiz-container">
+    <form id="quizForm">
+
+      <div class="question">
+        <h3>1. What does "karma" literally mean in Sanskrit?</h3>
+        <label><input type="radio" name="q1" value="a">Death</label>
+        <label><input type="radio" name="q1" value="b">Action</label>
+        <label><input type="radio" name="q1" value="c">Fate</label>
+        <label><input type="radio" name="q1" value="d">Punishment</label>
+        <p id="a1" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>2. According to the Law of Karma, every action leads to:</h3>
+        <label><input type="radio" name="q2" value="a">Rebirth only</label>
+        <label><input type="radio" name="q2" value="b">Eternal happiness</label>
+        <label><input type="radio" name="q2" value="c">A reaction</label>
+        <label><input type="radio" name="q2" value="d"> Moksha</label>
+        <p id="a2" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>3. What determines the circumstances of one's next birth according to Bhagavad-gītā?</h3>
+        <label><input type="radio" name="q3" value="a">Wealth</label>
+        <label><input type="radio" name="q3" value="b">Prayers</label>
+        <label><input type="radio" name="q3" value="c">Desires and actions</label>
+        <label><input type="radio" name="q3" value="d">God's mercy</label>
+        <p id="a3" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>4. Which of the following best represents the idea of karma in the book?</h3>
+        <label><input type="radio" name="q4" value="a">God's anger</label>
+        <label><input type="radio" name="q4" value="b">Scientific law</label>
+        <label><input type="radio" name="q4" value="c">Divine coincidence</label>
+        <label><input type="radio" name="q4" value="d">Cause and effect</label>
+        <p id="a4" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>5. What is the ultimate goal of understanding karma, as per the book?</h3>
+        <label><input type="radio" name="q5" value="a">To accumulate good karma</label>
+        <label><input type="radio" name="q5" value="b">To enjoy earthly pleasures</label>
+        <label><input type="radio" name="q5" value="c">To escape the cycle of birth and death</label>
+        <label><input type="radio" name="q5" value="d"> To become rich</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>6. Karma can be nullified by chanting and sincere devotional service.</h3>
+        <label><input type="radio" name="q6" value="a">True</label>
+        <label><input type="radio" name="q6" value="b">False</label>
+        <p id="a6" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>7. The law of karma only applies to humans, not animals.</h3>
+        <label><input type="radio" name="q6" value="a">True</label>
+        <label><input type="radio" name="q6" value="b">False</label>
+        <p id="a7" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>8. The soul dies with the body according to the Laws of Nature.</h3>
+        <label><input type="radio" name="q6" value="a">True</label>
+        <label><input type="radio" name="q6" value="b">False</label>
+        <p id="a8" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>9. Our present life’s sufferings are due to the karma of our past actions.</h3>
+        <label><input type="radio" name="q6" value="a">True</label>
+        <label><input type="radio" name="q6" value="b">False</label>
+        <p id="a9" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>10. The law of karma is controlled by material scientists.</h3>
+        <label><input type="radio" name="q6" value="a">True</label>
+        <label><input type="radio" name="q6" value="b">False</label>
+        <p id="a10" class="correct-answer"></p>
+      </div>
+
+      <button type="button" id="submitBtn">Submit Quiz</button>
+      <div id="result"></div>
+
+    </form>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'c',
+      q2: 'c',
+      q3: 'c',
+      q4: 'c',
+      q5: 'c',
+      q6: 'b',
+      q7: 'c',
+      q8: 'c',
+      q9: 'c',
+      q10: 'c',
+    };
+
+    const explanations = {
+      q1: "Correct Answer: b) Action",
+      q2: "Correct Answer: c) A reaction",
+      q3: "Correct Answer: c) Desires and actions",
+      q4: "Correct Answer:  d) Cause and effect",
+      q5: "Correct Answer: c) To escape the cycle of birth and death",
+      q6: "Correct Answer: a) True",
+      q7: "Correct Answer: b) False",
+      q8: "Correct Answer: b) False",
+      q9: "Correct Answer: a) True",
+      q10:"Correct Answer: b)  False",
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      const total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = answers[`q${i}`];
+        const answerEl = document.getElementById(`a${i}`);
+
+        if (selected && selected.value === correct) {
+          score++;
+        }
+
+        answerEl.innerText = explanations[`q${i}`];
+      }
+
+      document.getElementById('result').innerText =
+        `You scored ${score} out of ${total}. ${score === total ? "Excellent!" : score >= 5 ? "Good job!" : "Try again!"}`;
+    }
+
+    window.onload = () => {
+      document.getElementById('submitBtn').addEventListener('click', checkAnswers);
+    };
+  </script>
+</body>
+</html>
+      

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz – On The Way To Krishna</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3a14a;
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+      margin-top: -15px;
+    }
+    h1 {
+      text-align: center;
+      color: #7b3f00;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #f5af5f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #5a2e00;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #006400;
+    }
+    .correct-answer {
+      font-style: italic;
+      color: green;
+      margin-top: 5px;
+    }
+     #back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    #back-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quiz-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quiz – On The Way To Krishna</h1>
+  <button onclick="window.location.href='chap 1.html'" id="back-button" type="button">Back</button>
+  <div class="quiz-container">
+    <form id="quizForm">
+
+      <div class="question">
+         <h3>1. What is the primary goal of human life according to On the Way to Krishna?</h3>
+        <label><input type="radio" name="q1" value="a">Accumulation of wealth</label>
+        <label><input type="radio" name="q1" value="b"> Pursuit of sensory pleasures</label>
+        <label><input type="radio" name="q1" value="c"> Realization of one's relationship with Krishna</label>
+        <label><input type="radio" name="q1" value="d">Attainment of fame</label>
+        <p id="a1" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>2. Which practice is emphasized as the most effective means to attain Krishna consciousness in the current age (Kali Yuga)?</h3>
+        <label><input type="radio" name="q2" value="a"> Meditation</label>
+        <label><input type="radio" name="q2" value="b"> Ritual sacrifices</label>
+        <label><input type="radio" name="q2" value="c"> Chanting the holy names of the Lord</label>
+        <label><input type="radio" name="q2" value="d">Asceticism</label>
+        <p id="a2" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>3. What does the book identify as the root cause of suffering in the material world?</h3>
+        <label><input type="radio" name="q3" value="a">Lack of education</label>
+        <label><input type="radio" name="q3" value="b">Political instability</label>
+        <label><input type="radio" name="q3" value="c">Forgetfulness of our relationship with Krishna</label>
+        <label><input type="radio" name="q3" value="d">Economic disparity</label>
+        <p id="a3" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>4. How does On the Way to Krishna describe the material body?</h3>
+        <label><input type="radio" name="q4" value="a">As the true self</label>
+        <label><input type="radio" name="q4" value="b">As a temporary covering of the soul</label>
+        <label><input type="radio" name="q4" value="c">As an eternal entity</label>
+        <label><input type="radio" name="q4" value="d">As an illusion without any reality</label>
+        <p id="a4" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>5. According to the book, what is the nature of the soul?</h3>
+        <label><input type="radio" name="q5" value="a">Mortal and perishable</label>
+        <label><input type="radio" name="q5" value="b">Subject to birth and death</label>
+        <label><input type="radio" name="q5" value="c">Eternal, full of knowledge and bliss</label>
+        <label><input type="radio" name="q5" value="d">A byproduct of material elements</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+      
+      <div class="question">
+        <h3>6. What is the recommended method to overcome the influence of the material energy (Maya)?</h3>
+        <label><input type="radio" name="q5" value="a">Engaging in sense gratification</label>
+        <label><input type="radio" name="q5" value="b">Performing austerities</label>
+        <label><input type="radio" name="q5" value="c">Surrendering to Krishna and engaging in devotional service</label>
+        <label><input type="radio" name="q5" value="d">Accumulating material knowledge</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>7. In On the Way to Krishna, what is the significance of associating with devotees?</h3>
+        <label><input type="radio" name="q5" value="a">It leads to material prosperity</label>
+        <label><input type="radio" name="q5" value="b">It helps in developing a deeper understanding of scriptures</label>
+        <label><input type="radio" name="q5" value="c">It facilitates spiritual advancement and strengthens devotion</label>
+        <label><input type="radio" name="q5" value="d">It is a social obligation</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>8. What does the book suggest about the pursuit of material desires?</h3>
+        <label><input type="radio" name="q5" value="a">They should be fulfilled to achieve happiness</label>
+        <label><input type="radio" name="q5" value="b">They are endless and lead to bondage</label>
+        <label><input type="radio" name="q5" value="c">They are the ultimate goal of life</label>
+        <label><input type="radio" name="q5" value="d">They are necessary for spiritual growth</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>9. How does On the Way to Krishna define real happiness?</h3>
+        <label><input type="radio" name="q5" value="a">Satisfaction of the senses</label>
+        <label><input type="radio" name="q5" value="b">Accumulation of wealth and possessions</label>
+        <label><input type="radio" name="q5" value="c">Union with the Supreme Lord through devotional service</label>
+        <label><input type="radio" name="q5" value="d">Achieving fame and recognition</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>10. What is the role of a spiritual master as described in the book?</h3>
+        <label><input type="radio" name="q5" value="a">To provide material benefits</label>
+        <label><input type="radio" name="q5" value="b">To offer social status</label>
+        <label><input type="radio" name="q5" value="c">To guide the disciple on the path of Krishna consciousness</label>
+        <label><input type="radio" name="q5" value="d">To perform rituals on behalf of the disciple</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <button type="button" id="submitBtn">Submit Quiz</button>
+      <div id="result"></div>
+
+    </form>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'c',
+      q2: 'c',
+      q3: 'c',
+      q4: 'c',
+      q5: 'c',
+      q6: 'b',
+      q7: 'c',
+      q8: 'c',
+      q9: 'c',
+      q10: 'c',
+    };
+
+    const explanations = {
+      q1: "Correct Answer: c) Realization of one's relationship with Krishna",
+      q2: "Correct Answer: c) Chanting the holy names of the Lord",
+      q3: "Correct Answer: c) Forgetfulness of our relationship with Krishna",
+      q4: "Correct Answer: b) As a temporary covering of the soul",
+      q5: "Correct Answer: c) Eternal, full of knowledge and bliss",
+      q6: "Correct Answer: c) Surrendering to Krishna and engaging in devotional service",
+      q7: "Correct Answer: c) It facilitates spiritual advancement and strengthens devotion",
+      q8: "Correct Answer: b) They are endless and lead to bondage",
+      q9: "Correct Answer: c) Union with the Supreme Lord through devotional service",
+      q10: "Correct Answer:c) To guide the disciple on the path of Krishna consciousness",
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      const total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = answers[`q${i}`];
+        const answerEl = document.getElementById(`a${i}`);
+
+        if (selected && selected.value === correct) {
+          score++;
+        }
+        answerEl.innerText = explanations[`q${i}`];
+      }
+      document.getElementById('result').innerText =
+        `You scored ${score} out of ${total}. ${score === total ? "Excellent!" : score >= 5 ? "Good job!" : "Try again!"}`;
+    }
+    window.onload = () => {
+      document.getElementById('submitBtn').addEventListener('click', checkAnswers);
+    };
+  </script>
+</body>
+</html>
+      

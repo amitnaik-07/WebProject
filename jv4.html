@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<metacharset="UTF-8">
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<title>Array Insertion</title>
+</head>
+<body>
+    <h2>Insert data into Array</h2>
+    <input type="text"id="dataInput"placeholder="Enter Data">
+    <button onclick="myArray.push(document.getElementById('dataInput').value);
+    document.getElementById('arrayContent').innerText=myArray.join(',');">Insert</button>
+    <br>
+   <p>Array Content:<span id="arrayContent"></span></p>
+   <script>
+    var myArray=[];
+    </script>
+</body>
+</html>

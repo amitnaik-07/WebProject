@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz – On The Way To Krishna</title>
+     <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3a14a;
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+      margin-top: -15px;
+    }
+    h1 {
+      text-align: center;
+      color: #7b3f00;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #f5af5f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #5a2e00;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #006400;
+    }
+    .correct-answer {
+      font-style: italic;
+      color: green;
+      margin-top: 5px;
+    }
+     #back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    #back-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quiz-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quiz – The Hare Krishna Challenge</h1>
+  <button onclick="window.location.href='chap 3.html'" id="back-button" type="button">Back</button>
+  <div class="quiz-container">
+    <form id="quizForm">
+
+      <div class="question">
+        <h3>1. What is the primary goal of human life according to the book?</h3>
+        <label><input type="radio" name="q1" value="a">Earning wealth</label>
+        <label><input type="radio" name="q1" value="b">Sense gratification</label>
+        <label><input type="radio" name="q1" value="c">Self-realization</label>
+        <label><input type="radio" name="q1" value="d">Fame and popularity</label>
+        <p id="a1" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>2. What does chanting Hare Krishna primarily help with?</h3>
+        <label><input type="radio" name="q2" value="a">Entertainment</label>
+        <label><input type="radio" name="q2" value="b">Mental distraction</label>
+        <label><input type="radio" name="q2" value="c">Awakening spiritual consciousness</label>
+        <label><input type="radio" name="q2" value="d">Memorization power</label>
+        <p id="a2" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>3. According to Srila Prabhupada, who is the real guru?</h3>
+        <label><input type="radio" name="q3" value="a">Anyone with followers</label>
+        <label><input type="radio" name="q3" value="b">A person who speaks sweetly</label>
+        <label><input type="radio" name="q3" value="c">One who strictly follows the scriptures</label>
+        <label><input type="radio" name="q3" value="d">A powerful yogi</label>
+        <p id="a3" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>4. Which of the following is the greatest challenge in modern civilization?</h3>
+        <label><input type="radio" name="q4" value="a">Lack of technology</label>
+        <label><input type="radio" name="q4" value="b">Lack of education</label>
+        <label><input type="radio" name="q4" value="c">Misunderstanding the purpose of life</label>
+        <label><input type="radio" name="q4" value="d">Lack of medical advancements</label>
+        <p id="a4" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>5. The Hare Krishna movement emphasizes returning to:</h3>
+        <label><input type="radio" name="q5" value="a">A rich material life</label>
+        <label><input type="radio" name="q5" value="b">Heaven for eternal rest</label>
+        <label><input type="radio" name="q5" value="c">Our original relationship with God</label>
+        <label><input type="radio" name="q5" value="d">A yogic cave life</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>6. Srila Prabhupada compares the body to:</h3>
+        <label><input type="radio" name="q6" value="a">A bird</label>
+        <label><input type="radio" name="q6" value="b">A car</label>
+        <label><input type="radio" name="q6" value="c">A prison</label>
+        <label><input type="radio" name="q6" value="d">A school</label>
+        <p id="a6" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>7. Why do materialists often reject God?</h3>
+        <label><input type="radio" name="q7" value="a">They are highly educated</label>
+        <label><input type="radio" name="q7" value="b">They seek logic</label>
+        <label><input type="radio" name="q7" value="c">They fear losing enjoyment</label>
+        <label><input type="radio" name="q7" value="d">They have deep spiritual insight</label>
+        <p id="a7" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>8. What does Krishna consciousness aim to awaken?</h3>
+        <label><input type="radio" name="q8" value="a">Money consciousness</label>
+        <label><input type="radio" name="q8" value="b">Dream control</label>
+        <label><input type="radio" name="q8" value="c">Love for Krishna</label>
+        <label><input type="radio" name="q8" value="d">Fearlessness</label>
+        <p id="a8" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>9. What is the ultimate solution to the cycle of birth and death?</h3>
+        <label><input type="radio" name="q9" value="a">Good karma</label>
+        <label><input type="radio" name="q9" value="b">Scientific advancements</label>
+        <label><input type="radio" name="q9" value="c">Devotional service to Krishna</label>
+        <label><input type="radio" name="q9" value="d">Becoming a monk</label>
+        <p id="a9" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>10. What does Srila Prabhupada say about the mind?</h3>
+        <label><input type="radio" name="q10" value="a">It should be ignored</label>
+        <label><input type="radio" name="q10" value="b">It is always right</label>
+        <label><input type="radio" name="q10" value="c">It must be controlled</label>
+        <label><input type="radio" name="q10" value="d">It is the source of bliss</label>
+        <p id="a10" class="correct-answer"></p>
+      </div>
+
+      <button type="button" id="submitBtn">Submit Quiz</button>
+      <div id="result"></div>
+
+    </form>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'c',
+      q2: 'c',
+      q3: 'c',
+      q4: 'c',
+      q5: 'c',
+      q6: 'b',
+      q7: 'c',
+      q8: 'c',
+      q9: 'c',
+      q10: 'c',
+    };
+
+    const explanations = {
+      q1: "Correct Answer: c) Self-realization",
+      q2: "Correct Answer: c) Awakening spiritual consciousness",
+      q3: "Correct Answer: c) One who strictly follows the scriptures",
+      q4: "Correct Answer: c) Misunderstanding the purpose of life",
+      q5: "Correct Answer: c) Our original relationship with God",
+      q6: "Correct Answer: b) A car",
+      q7: "Correct Answer: c) They fear losing enjoyment",
+      q8: "Correct Answer: c) Love for Krishna",
+      q9: "Correct Answer: c) Devotional service to Krishna",
+      q10: "Correct Answer: c) It must be controlled",
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      const total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = answers[`q${i}`];
+        const answerEl = document.getElementById(`a${i}`);
+
+        if (selected && selected.value === correct) {
+          score++;
+        }
+
+        answerEl.innerText = explanations[`q${i}`];
+      }
+
+      document.getElementById('result').innerText =
+        `You scored ${score} out of ${total}. ${score === total ? "Excellent!" : score >= 5 ? "Good job!" : "Try again!"}`;
+    }
+
+    window.onload = () => {
+      document.getElementById('submitBtn').addEventListener('click', checkAnswers);
+    };
+  </script>
+
+</body>
+</html>
+      

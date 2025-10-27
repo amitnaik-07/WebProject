@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<title>Student Registration</title>
+</head>
+<body>
+    <form action="Submit_registration"method="post" enctype="multipart/form-data">
+        <table>
+            <tr><td><label for="fname">firstName:</label></td>
+            <td><input type="text"id="fname"name="fname" required><br></td></tr>
+            <tr><td><label for="lname">lastName:</label></td>
+            <td><input type="text"id="lname"name="lname" required><br></td></tr>
+            <tr><td><label for="email">Email:</label></td>
+            <td><input type="text"id="email"name="email" required><br></td></tr>
+            <tr><td><label for="password">Password:</label></td>
+            <td><input type="number"id="password"name="password" autocomplete="*"><br></td></tr>
+            <tr><td><label for="dob">Date of Birth:</label></td>
+            <td><input type="date"id="dob"name="dob" required><br></td></tr>
+            <tr><td><label for="phone">Phone:</label></td>
+            <td><input type="tel"id="phone"name="phone" required><br></td></tr>
+            <tr><td><label for="address">Address:</label></td>
+            <td><input type="text"id="address"name="address" required><br></td></tr>
+            <tr><td><label for="state">State:</label></td>
+            <td><input type="text"id="state"name="state" required><br></td></tr>
+             <tr><td><label for="pincode">Pincode:</label></td>
+            <td><input type="number"id="pin"name="pin" pattern='[0-6]{6}' required><br></td></tr>
+        </table>
+        <label for="gender">Gender:</label><br>
+        <input type="radio"id="male"name="gender" value="male">Male
+        <input type="radio"id="female"name="gender" value="female">Female
+        <input type="radio"id="other"name="gender" value="other">Other<br>
+        <label for="course">Course:</label><br>
+        <input type="radio"id="BA"name="course" value="Ba">BA<br>
+        <input type="radio"id="BSC"name="course" value="BSC">BSC<br>
+        <input type="radio"id="BBA"name="course" value="BBA">BBA<br>
+        <input type="submit"value="submit">
+        <input type="reset"value="reset">
+    </form>
+</body>
+</html>

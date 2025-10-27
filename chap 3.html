@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="astyle.css">
+    <title>The Hare Krishna Challenge</title>
+    <style>
+        body {
+            background-color: #dc8426;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px; 
+        }
+        h1 {
+            margin-top: -15px;
+            font-size: 60px;
+            margin-bottom: 50px;
+            color: #7b3f00; 
+        }
+        .book-cover {
+            margin-bottom: 30px; 
+        }
+        .book-cover img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        .audio-player-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: -20px;
+            padding: 20px;
+            background-color:#f09d4a; 
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .audio-chapter {
+            background-color:  #efa657; 
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .audio-chapter h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #5a2d0c;
+            font-size: 1.2em;
+        }
+        .audio-chapter audio {
+            width: 100%; 
+            max-width: 300px;
+            margin-top: 10px;
+        }
+ #back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    #back-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quiz-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='library.html'" id="back-button" type="button">Back</button>
+    <h1><u>The Hare Krishna Challenge</u></h1>
+    <div class="audio-player-grid">
+        <div class="audio-chapter">
+            <h3>Chapter 1</h3>
+            <audio controls>
+                  <source src="audio\The Krishna Challenge chap1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="audio-chapter">
+            <h3>Chapter 2</h3>
+            <audio controls>
+                 <source src="audio\The Krishna Challenge chap2.mp3"type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="audio-chapter">
+            <h3>Chapter 3</h3>
+            <audio controls>
+                <source src="audio\The Krishna Challenge chap3.unknown"type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="audio-chapter">
+            <h3>Chapter 4</h3>
+            <audio controls>
+                <source src="audio\The Krishna Challenge chap4.unknown"type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="audio-chapter">
+            <h3>Chapter 5</h3>
+            <audio controls>
+                <source src="audio\The Krishna Challenge chap5.mp3.unknown"type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+<a href="quiz3.html" class="quiz-button"><strong>Take Quiz</strong></a>
+</body>
+</html>

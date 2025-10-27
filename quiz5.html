@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz – Science Of Reincarnation</title>
+     <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3a14a;
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+      margin-top: -15px;
+    }
+    h1 {
+      text-align: center;
+      color: #7b3f00;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #f5af5f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #5a2e00;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #006400;
+    }
+    .correct-answer {
+      font-style: italic;
+      color: green;
+      margin-top: 5px;
+    }
+     #back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    #back-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quiz-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7b3f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+    }
+  </style>
+  </head>
+<body>
+
+  <h1>Quiz –  Science Of Reincarnation</h1>
+  <button onclick="window.location.href='chap 5.html'" id="back-button" type="button">Back</button>
+  <div class="quiz-container">
+    <form id="quizForm">
+
+      <div class="question">
+        <h3>1. What is reincarnation according to Vedic knowledge?</h3>
+        <label><input type="radio" name="q1" value="a">The soul merges into nothingness</label>
+        <label><input type="radio" name="q1" value="b">The body is reborn again and again</label>
+        <label><input type="radio" name="q1" value="c">The soul takes a new body after death</label>
+        <label><input type="radio" name="q1" value="d">Karma disappears after death</label>
+        <p id="a1" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>2. Which element does not die when the body dies?</h3>
+        <label><input type="radio" name="q2" value="a">Mind</label>
+        <label><input type="radio" name="q2" value="b">Soul</label>
+        <label><input type="radio" name="q2" value="c">Body</label>
+        <label><input type="radio" name="q2" value="d">Intelligence</label>
+        <p id="a2" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>3. Who controls the process of reincarnation?</h3>
+        <label><input type="radio" name="q3" value="a">Science</label>
+        <label><input type="radio" name="q3" value="b">The Sun</label>
+        <label><input type="radio" name="q3" value="c">Supreme Personality of Godhead (Krishna)</label>
+        <label><input type="radio" name="q3" value="d">Chance</label>
+        <p id="a3" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>4. What determines the next birth of a living entity?</h3>
+        <label><input type="radio" name="q4" value="a">Fate</label>
+        <label><input type="radio" name="q4" value="b">Prayers</label>
+        <label><input type="radio" name="q4" value="c">Desires and karma</label>
+        <label><input type="radio" name="q4" value="d">Wealth</label>
+        <p id="a4" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>5. What example does the Bhagavad Gita give to explain reincarnation?</h3>
+        <label><input type="radio" name="q5" value="a">A flowing river</label>
+        <label><input type="radio" name="q5" value="b">A flame</label>
+        <label><input type="radio" name="q5" value="c">Changing clothes</label>
+        <label><input type="radio" name="q5" value="d">A broken mirror</label>
+        <p id="a5" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>6. What happens to desires at the time of death?</h3>
+        <label><input type="radio" name="q6" value="a">They vanish</label>
+        <label><input type="radio" name="q6" value="b">They transform into memories</label>
+        <label><input type="radio" name="q6" value="c">They follow the soul</label>
+        <label><input type="radio" name="q6" value="d">They are burnt</label>
+        <p id="a6" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>7. What is the goal of human life according to Krishna Consciousness?</h3>
+        <label><input type="radio" name="q7" value="a">To enjoy life fully</label>
+        <label><input type="radio" name="q7" value="b">To accumulate wealth</label>
+        <label><input type="radio" name="q7" value="c">To break the cycle of birth and death</label>
+        <label><input type="radio" name="q7" value="d">To travel to heaven</label>
+        <p id="a7" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>8. What is the eternal identity of the soul?</h3>
+        <label><input type="radio" name="q8" value="a">To be the body</label>
+        <label><input type="radio" name="q8" value="b">To be the mind</label>
+        <label><input type="radio" name="q8" value="c">To serve Krishna</label>
+        <label><input type="radio" name="q8" value="d">To rule over others</label>
+        <p id="a8" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>9. Which scripture explains the process of transmigration of the soul?</h3>
+        <label><input type="radio" name="q9" value="a">Bible</label>
+        <label><input type="radio" name="q9" value="b">Quran</label>
+        <label><input type="radio" name="q9" value="c">Bhagavad Gita</label>
+        <label><input type="radio" name="q9" value="d">Mahabharata</label>
+        <p id="a9" class="correct-answer"></p>
+      </div>
+
+      <div class="question">
+        <h3>10. Why is human birth considered rare and precious?</h3>
+        <label><input type="radio" name="q10" value="a">Humans can live longer</label>
+        <label><input type="radio" name="q10" value="b">Humans are more intelligent</label>
+        <label><input type="radio" name="q10" value="c">Humans can attain liberation through spiritual knowledge</label>
+        <label><input type="radio" name="q10" value="d">Humans can enjoy more than animals</label>
+        <p id="a10" class="correct-answer"></p>
+      </div>
+
+      <button type="button" id="submitBtn">Submit Quiz</button>
+      <div id="result"></div>
+
+    </form>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'c',
+      q2: 'b',
+      q3: 'c',
+      q4: 'c',
+      q5: 'c',
+      q6: 'c',
+      q7: 'c',
+      q8: 'c',
+      q9: 'c',
+      q10: 'c',
+    };
+
+    const explanations = {
+      q1: "Correct Answer: c) The soul takes a new body after death",
+      q2: "Correct Answer: b) Soul",
+      q3: "Correct Answer: c) Supreme Personality of Godhead (Krishna) ",
+      q4: "Correct Answer: c) Desires and karma",
+      q5: "Correct Answer: c) Changing clothes",
+      q6: "Correct Answer: c) They follow the soul ",
+      q7: "Correct Answer: c) To break the cycle of birth and death ",
+      q8: "Correct Answer: c) To serve Krishna",
+      q9: "Correct Answer: c) Bhagavad Gita",
+      q10: "Correct Answer: c) Humans can attain liberation through spiritual knowledge",
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      const total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const correct = answers[`q${i}`];
+        const answerEl = document.getElementById(`a${i}`);
+
+        if (selected && selected.value === correct) {
+          score++;
+        }
+
+        answerEl.innerText = explanations[`q${i}`];
+      }
+
+      document.getElementById('result').innerText =
+        `You scored ${score} out of ${total}. ${score === total ? "Excellent!" : score >= 5 ? "Good job!" : "Try again!"}`;
+    }
+
+    window.onload = () => {
+      document.getElementById('submitBtn').addEventListener('click', checkAnswers);
+    };
+  </script>
+</body>
+</html>
+      
